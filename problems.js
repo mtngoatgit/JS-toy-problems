@@ -80,6 +80,31 @@ const howMuchILoveYou=n=>['not at all','I love you','a little','a lot','passiona
 // n%6 takes the argument, does modulus and returns the remainder, which is the proper index of the array
 
 
+************************Consecutive Strings********************************
+// Description:
+
+// You are given an array strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+
+// Example:
+
+// longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
+
+// n being the length of the string array, if n = 0 or k > n or k <= 0 return "".
+  
+function longestConsec(strarr, k){
+  var n = strarr.length;
+  if (n === 0 || k > n || k <= 0) return "";
+  var finalStr = "";
+  for (var i = 0; i < strarr.length; i++) {
+    var longStr = strarr.slice(i, i + k).join("");
+    if (longStr.length > finalStr.length) {
+      finalStr = longStr;
+    }
+  }
+  return finalStr;
+}
+
+
 
 
 
