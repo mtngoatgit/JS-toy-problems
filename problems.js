@@ -132,6 +132,28 @@ function pillow(s){
   return false
 }
 
+***************************Sorting the Odd Way******************************
+// Given an array of numbers, sort them in such a manner that all the odd numbers 
+// in the array are sorted in ascending order and the even numbers are sorted 
+// in descending order after the last odd number. For example [1,2,3,4,5,6,7,8,9] 
+// produces the output [1,3,5,7,9,8,6,4,2]. If the array contains decimals, round them down while checking for odd/even. 
+// The output must have the original numbers!
 
+function sortItOut(array){
+  var odds = [];
+  var evens = [];
+  var final = [];
+  for(var i = 0; i < array.length; i++){
+    if(Math.floor(array[i]) % 2 === 0){
+      evens.push(array[i])
+    }
+    else {
+      odds.push(array[i])
+    }
+  }
+  final.push(odds.sort((a,b) => a - b))
+  final.push(evens.sort((a,b) => b - a))
+  return final.reduce((a,b) => a.concat(b))
+}
 
 
