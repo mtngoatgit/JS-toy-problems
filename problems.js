@@ -168,3 +168,10 @@ function trueOrFalse(val){
   return (val === false) ? 'false' : 'true';
 }
 
+**************************Reversing Words in a String**********************************
+// You need to write a function that reverses the words in a given string. A word can also fit an empty string.
+  
+function reverse(string){
+  return string.split(' ').reverse().join(' ')
+}
+
