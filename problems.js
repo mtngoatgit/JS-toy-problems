@@ -209,4 +209,11 @@ fakeBin = x = x.split('').map(n => n < 5 ? 0 : 1).join('');
   
 stringToArray = x => x.split(' ');
 
+***************************Convert boolean values to strings "Yes" or "No"***********************
+// Complete the bool_to_word (Javascript: boolToWord ) method.
+// Given: a boolean value
+// Return: a 'Yes' string for true and a 'No' string for false
+  
+boolToWord = x => x == true ? "Yes" : "No";
+
 
