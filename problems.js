@@ -187,5 +187,20 @@ function basicOp(operation, value1, value2) {
   if (operation == '-') return value1 - value2;
 }
 
+***********************Fake Binary**********************************
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. 
+// Return the resulting string.
+  
+function fakeBin(x){
+  var arr = x.split('');
+  var final = [];
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i] < 5) final.push(0);
+    else final.push(1);
+  }
+  return final.join('');
+}
 
+//ES6 solution:
+fakeBin = x = x.split('').map(n => n < 5 ? 0 : 1).join('');
 
