@@ -221,3 +221,19 @@ boolToWord = x => x == true ? "Yes" : "No";
 
 find_average = x => x.reduce((a, b) => a + b)/x.length
 
+*********************Basic JS - Calculating Averages************************
+// Let's build a calculator that can calculate the average for an arbitrary number of arguments.
+
+// The test expects you to provide a Calculator object with an average method:
+
+// Calculator.average()
+// The test also expects that when you pass no arguments, it returns 0. The arguments are expected to be integers.
+
+// It expects Calculator.average(3,4,5) to return 4.
+  
+var Calculator = {
+ average: function(...values) {
+   return values.length < 1 ? 0 : values.reduce((a, b) => a + b, 0)/values.length
+ }
+};
+
