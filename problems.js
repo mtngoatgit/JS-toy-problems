@@ -216,4 +216,8 @@ stringToArray = x => x.split(' ');
   
 boolToWord = x => x == true ? "Yes" : "No";
 
+************************Calculate Average****************************
+// Write function avg which calaculates average of numbers in given list.
+
+find_average = x => x.reduce((a, b) => a + b)/x.length
 
