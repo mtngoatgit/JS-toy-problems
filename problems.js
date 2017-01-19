@@ -242,3 +242,7 @@ var Calculator = {
 // You're given one parameter.
 
 removeChar = str => str.split('').slice(1, str.length -1).join('')
+
+// Reformulate with String methods
+
+removeChar = str => str.slice(1, -1)
