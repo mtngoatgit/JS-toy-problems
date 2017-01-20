@@ -246,3 +246,23 @@ removeChar = str => str.split('').slice(1, str.length -1).join('')
 // Reformulate with String methods
 
 removeChar = str => str.slice(1, -1)
+
+**************************String reverse slicing 101************************************
+
+// You'll be given a string of characters as an input.
+// Create a function reverse_slice/reverseSlice that returns a list of strings: (a) in the reverse order of the original string, and (b) with each successive string starting one character further in from the end of the original string.
+// For example:
+// '123'  becomes  ['321','21','1']
+// and
+// 'abcde'  becomes  ['edcba','dcba','cba', 'ba', 'a']
+// Assume the original string is at least 3 characters long. Try to do this using slices and avoid converting the string to a list.
+
+function reverseSlice(str) {
+  var final = [];
+  str = str.split('').reverse().join('');
+  for(var i = 0; i < str.length; i++) {
+    var snipped = str.slice(i, str.length);
+    final.push(snipped);
+  }
+  return final;
+}
