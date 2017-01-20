@@ -266,3 +266,12 @@ function reverseSlice(str) {
   }
   return final;
 }
+
+************************Find Maximum and Minimum Values of a List************************
+// Your task is to make two functions, max and min (maximum and minimum in PHP) 
+// that take a(n) array/vector of integers list as input and outputs, respectively, 
+// the largest and lowest number in that array/vector.
+  
+max = list => list.sort((a, b) => b - a).shift();
+
+min = list => list.sort((a, b) => a - b).shift();
