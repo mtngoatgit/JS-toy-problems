@@ -1,3 +1,3 @@
-# toy-problems
+# JS toy-problems
 
-A repository for problems solved in codewars.
+A repository for Javascript problems solved @ Codewars.com
